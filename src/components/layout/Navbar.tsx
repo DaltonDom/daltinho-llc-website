@@ -18,7 +18,7 @@ export function Navbar() {
         {/* Top row — logo + desktop links + hamburger */}
         <div className="flex items-center gap-2 px-5 py-2.5">
           {/* Logo */}
-          <a href="#" className="font-heading font-bold text-base text-text-primary tracking-tight mr-2">
+          <a href="/" className="font-heading font-bold text-base text-text-primary tracking-tight mr-2">
             Daltinho
             <span className="text-accent-400 ml-0.5">.</span>
           </a>

@@ -8,7 +8,7 @@ import type { StatusColor } from '@/types'
 const techStack: { name: string; color: StatusColor }[] = [
   { name: 'Swift', color: 'orange' },
   { name: 'TypeScript', color: 'blue' },
-  { name: 'Python', color: 'yellow' },
+  { name: 'Claude', color: 'yellow' },
   { name: 'Next.js', color: 'green' },
   { name: 'SwiftUI', color: 'blue' },
   { name: 'Node.js', color: 'green' },

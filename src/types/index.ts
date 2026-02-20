@@ -10,9 +10,13 @@ export interface AppData {
   statusLabel: string
   features: string[]
   featureColors: StatusColor[]
+  featureDescriptions: string[]
   accentColor: string
   icon: string
   appStoreUrl: string
+  longDescription: string
+  philosophy: string
+  screenshots?: string[]
 }
 
 export interface NavLink {

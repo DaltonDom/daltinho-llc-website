@@ -53,7 +53,7 @@ export function StorySection() {
           {/* Stat — apps shipped */}
           <BentoCard className="flex flex-col items-center justify-center text-center" delay={0.1}>
             <span className="text-6xl md:text-7xl font-heading font-bold text-accent-400 mb-2">
-              3
+              7+
             </span>
             <span className="text-sm font-mono text-text-secondary uppercase tracking-wider">
               Products Shipped
@@ -89,8 +89,8 @@ export function StorySection() {
                 D
               </div>
               <div>
-                <span className="text-sm font-medium text-text-primary block">Founder</span>
-                <span className="text-xs text-text-tertiary">Daltinho LLC</span>
+                <span className="text-sm font-medium text-text-primary block">Dalton Domenighi</span>
+                <span className="text-xs text-text-tertiary">Founder</span>
               </div>
             </div>
           </BentoCard>

@@ -89,15 +89,18 @@ export function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
-          className="mt-20 md:mt-28"
+          className="mt-20 md:mt-28 flex flex-col items-center gap-3"
         >
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
-            className="mx-auto w-5 h-8 rounded-full border border-surface-500 flex items-start justify-center pt-1.5"
+            className="w-5 h-8 rounded-full border border-surface-500 flex items-start justify-center pt-1.5"
           >
             <div className="w-1 h-1.5 rounded-full bg-accent-500" />
           </motion.div>
+          <span className="text-[10px] font-mono uppercase tracking-widest text-text-tertiary">
+            Scroll to explore
+          </span>
         </motion.div>
       </div>
     </section>

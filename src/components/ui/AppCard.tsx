@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'motion/react'
 import { AppData, StatusColor } from '@/types'
 import { Badge } from './Badge'
@@ -18,12 +19,15 @@ export function AppCard({ app }: AppCardProps) {
     >
       {/* Header — icon + name + status */}
       <div className="flex items-start gap-3.5 mb-5">
-        {/* App icon placeholder */}
-        <div
-          className="w-14 h-14 rounded-xl shrink-0 flex items-center justify-center text-xl font-heading font-bold text-surface-950"
-          style={{ backgroundColor: app.accentColor }}
-        >
-          {app.name[0]}
+        {/* App icon */}
+        <div className="w-14 h-14 rounded-xl shrink-0 overflow-hidden relative">
+          <Image
+            src={app.icon}
+            alt={`${app.name} icon`}
+            fill
+            className="object-cover"
+            sizes="56px"
+          />
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
@@ -31,7 +35,7 @@ export function AppCard({ app }: AppCardProps) {
               {app.name}
             </h3>
             <span className="inline-flex items-center gap-1.5 text-[10px] font-mono text-text-tertiary">
-              <span className="w-1.5 h-1.5 rounded-full bg-dot-green dot-pulse" />
+              <span className={`w-1.5 h-1.5 rounded-full dot-pulse ${app.status === 'in-development' ? 'bg-dot-orange' : 'bg-dot-green'}`} />
               {app.statusLabel}
             </span>
           </div>
@@ -41,7 +45,11 @@ export function AppCard({ app }: AppCardProps) {
 
       {/* Phone mockup */}
       <div className="flex justify-center mb-5 py-4">
-        <PlaceholderPhone appName={app.name} accentColor={app.accentColor} />
+        <PlaceholderPhone
+          appName={app.name}
+          accentColor={app.accentColor}
+          screenshot={app.screenshots?.[0]}
+        />
       </div>
 
       {/* Description */}
@@ -63,7 +71,7 @@ export function AppCard({ app }: AppCardProps) {
       {/* App Store link */}
       <div className="mt-5 pt-4 border-t border-surface-600">
         <a
-          href={app.appStoreUrl}
+          href={`/apps/${app.id}`}
           className="inline-flex items-center gap-1.5 text-sm font-medium text-accent-400 hover:text-accent-300 transition-colors group/link"
         >
           View Project
