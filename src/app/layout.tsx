@@ -3,13 +3,13 @@ import { bricolage, jakarta, plexMono } from "@/lib/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Daltinho LLC | SwiftUI Mobile Apps",
+  title: "Daltinho LLC | Software, AI & Automation",
   description:
-    "Daltinho LLC builds premium SwiftUI mobile applications for iOS. Explore our portfolio of beautifully crafted apps.",
-  keywords: ["SwiftUI", "iOS apps", "mobile development", "Daltinho LLC"],
+    "Daltinho LLC builds premium software, AI applications, and automation tools. Explore our portfolio of beautifully crafted products.",
+  keywords: ["software development", "AI applications", "automation tools", "mobile apps", "Daltinho LLC"],
   openGraph: {
-    title: "Daltinho LLC | SwiftUI Mobile Apps",
-    description: "Premium SwiftUI mobile applications for iOS.",
+    title: "Daltinho LLC | Software, AI & Automation",
+    description: "Premium software, AI applications, and automation tools.",
     type: "website",
   },
 };

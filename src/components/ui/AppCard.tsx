@@ -66,7 +66,7 @@ export function AppCard({ app }: AppCardProps) {
           href={app.appStoreUrl}
           className="inline-flex items-center gap-1.5 text-sm font-medium text-accent-400 hover:text-accent-300 transition-colors group/link"
         >
-          View on App Store
+          View Project
           <svg
             width="14"
             height="14"

@@ -6,31 +6,31 @@ import { FadeInOnScroll } from '@/components/animations/FadeInOnScroll'
 import type { StatusColor } from '@/types'
 
 const techStack: { name: string; color: StatusColor }[] = [
-  { name: 'SwiftUI', color: 'blue' },
   { name: 'Swift', color: 'orange' },
-  { name: 'Xcode', color: 'blue' },
-  { name: 'Core Data', color: 'green' },
-  { name: 'CloudKit', color: 'blue' },
-  { name: 'Combine', color: 'yellow' },
-  { name: 'UIKit', color: 'red' },
-  { name: 'StoreKit', color: 'green' },
+  { name: 'TypeScript', color: 'blue' },
+  { name: 'Python', color: 'yellow' },
+  { name: 'Next.js', color: 'green' },
+  { name: 'SwiftUI', color: 'blue' },
+  { name: 'Node.js', color: 'green' },
+  { name: 'OpenAI', color: 'red' },
+  { name: 'AWS', color: 'orange' },
 ]
 
 export function AboutSection() {
   return (
     <section id="about" className="py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-5 md:px-8 lg:px-6">
-        <SectionHeading title="About" subtitle="The Studio Behind the Apps" />
+        <SectionHeading title="About" subtitle="The Studio Behind the Products" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
           {/* Story */}
           <FadeInOnScroll>
             <div className="space-y-5">
               <p className="text-text-secondary leading-relaxed">
-                Daltinho LLC is a mobile-first software studio specializing in native iOS applications built with SwiftUI. We believe in crafting apps that feel like a natural extension of Apple&apos;s design language — fluid, intuitive, and visually refined.
+                Daltinho LLC is a software studio that builds products people love to use — mobile apps, AI tools, web platforms, and automation systems. We believe every piece of software deserves the same obsessive attention to detail, whether it&apos;s a consumer app or a backend pipeline.
               </p>
               <p className="text-text-secondary leading-relaxed">
-                Every app we ship is obsessively polished, from the animations down to the typography. We focus on solving real problems with elegant, thoughtful interfaces that people actually enjoy using.
+                Every product we ship is obsessively polished, from the interfaces down to the infrastructure. We focus on solving real problems with elegant, thoughtful solutions that people actually enjoy using.
               </p>
             </div>
           </FadeInOnScroll>
@@ -56,7 +56,7 @@ export function AboutSection() {
                   </span>
                 </div>
                 <p className="text-sm text-text-secondary leading-relaxed italic">
-                  &ldquo;Ship fewer things, but ship them beautifully. An app that feels right is worth more than ten that feel rushed.&rdquo;
+                  &ldquo;Ship fewer things, but ship them beautifully. A product that feels right is worth more than ten that feel rushed.&rdquo;
                 </p>
               </div>
             </div>

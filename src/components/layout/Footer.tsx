@@ -26,7 +26,7 @@ export function Footer() {
     <footer className="border-t border-surface-800 py-8 md:py-10">
       <div className="max-w-6xl mx-auto px-5 md:px-8 lg:px-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-xs text-text-tertiary font-mono">
-          &copy; 2026 Daltinho LLC. Crafted with SwiftUI &amp; Next.js.
+          &copy; 2026 Daltinho LLC. Crafted with care &amp; code.
         </p>
         <div className="flex items-center gap-4">
           {socialLinks.map((link) => {

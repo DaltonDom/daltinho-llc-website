@@ -9,7 +9,7 @@ export function AppsSection() {
   return (
     <section id="apps" className="py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-5 md:px-8 lg:px-6">
-        <SectionHeading title="Portfolio" subtitle="Apps We've Built" />
+        <SectionHeading title="Portfolio" subtitle="What We've Built" />
 
         <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {apps.map((app) => (

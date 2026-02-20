@@ -38,7 +38,7 @@ export function ContactSection() {
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-500 to-transparent" />
 
             <p className="text-text-secondary leading-relaxed mb-8 max-w-lg">
-              Have an app idea? Want to collaborate? We&apos;d love to hear from you. Drop us a line and we&apos;ll get back to you as soon as we can.
+              Have a project in mind? Want to collaborate? We&apos;d love to hear from you. Drop us a line and we&apos;ll get back to you as soon as we can.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-4 mb-8">

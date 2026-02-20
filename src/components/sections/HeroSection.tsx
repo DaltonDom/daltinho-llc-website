@@ -3,7 +3,7 @@
 import { motion } from 'motion/react'
 import { Button } from '@/components/ui/Button'
 
-const headline = 'We Build Beautiful Mobile Apps'
+const headline = 'We Build Beautiful Software'
 const words = headline.split(' ')
 
 export function HeroSection() {
@@ -34,7 +34,7 @@ export function HeroSection() {
         >
           <span className="inline-flex items-center gap-2 rounded-full bg-surface-800/60 backdrop-blur-sm border border-surface-600/50 px-4 py-1.5 text-xs font-mono text-text-secondary">
             <span className="w-1.5 h-1.5 rounded-full bg-dot-green dot-pulse" />
-            SwiftUI Studio
+            Software Studio
           </span>
         </motion.div>
 
@@ -68,7 +68,7 @@ export function HeroSection() {
           transition={{ duration: 0.7, delay: 0.7, ease: [0.22, 1, 0.36, 1] as const }}
           className="text-base md:text-lg text-text-secondary max-w-md mx-auto mb-10 leading-relaxed"
         >
-          Daltinho LLC crafts premium SwiftUI experiences for iOS — from concept to the App Store.
+          Daltinho LLC crafts premium software, AI tools, and digital products — from concept to launch.
         </motion.p>
 
         {/* CTA */}
