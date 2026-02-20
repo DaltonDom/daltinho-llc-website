@@ -1,26 +1,125 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Backgrounds — neutral cool gray */
+  --color-surface-950: #0d0e10;
+  --color-surface-900: #141518;
+  --color-surface-800: #1b1d21;
+  --color-surface-700: #23262a;
+  --color-surface-600: #2e3136;
+  --color-surface-500: #3d4148;
+  --color-surface-400: #52575f;
+
+  /* Accent — emerald green */
+  --color-accent-300: #86efac;
+  --color-accent-400: #4ade80;
+  --color-accent-500: #22c55e;
+  --color-accent-600: #16a34a;
+  --color-accent-700: #15803d;
+
+  /* Text */
+  --color-text-primary: #eaecf0;
+  --color-text-secondary: #9ca3ae;
+  --color-text-tertiary: #606770;
+
+  /* Status dots */
+  --color-dot-green: #4ade80;
+  --color-dot-blue: #60a5fa;
+  --color-dot-yellow: #facc15;
+  --color-dot-orange: #fb923c;
+  --color-dot-red: #f87171;
+
+  /* Fonts */
+  --font-heading: var(--font-bricolage), Georgia, serif;
+  --font-body: var(--font-jakarta), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-surface-950);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background-color: var(--color-accent-500);
+  color: var(--color-surface-950);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-600);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-surface-500);
+}
+
+/* Pulse animation for status dots */
+@keyframes dot-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.dot-pulse {
+  animation: dot-pulse 2s ease-in-out infinite;
+}
+
+/* Floating orb animations for hero */
+@keyframes float-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(60px, -40px) scale(1.1); }
+  66% { transform: translate(-30px, 50px) scale(0.95); }
+}
+
+@keyframes float-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-80px, -60px) scale(1.15); }
+}
+
+@keyframes float-3 {
+  0%, 100% { transform: translate(0, 0) scale(1.05); }
+  40% { transform: translate(40px, 70px) scale(0.9); }
+  80% { transform: translate(-50px, -20px) scale(1.1); }
+}
+
+@keyframes float-4 {
+  0%, 100% { transform: translate(0, 0) scale(0.95); }
+  30% { transform: translate(-50px, 40px) scale(1.08); }
+  70% { transform: translate(70px, -30px) scale(1); }
+}
+
+.orb-1 { animation: float-1 20s ease-in-out infinite; }
+.orb-2 { animation: float-2 25s ease-in-out infinite; }
+.orb-3 { animation: float-3 18s ease-in-out infinite; }
+.orb-4 { animation: float-4 22s ease-in-out infinite; }
+
+/* Dot grid pattern */
+.dot-grid {
+  background-image: radial-gradient(circle, var(--color-surface-500) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Noise texture overlay */
+.noise-bg::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
 }
